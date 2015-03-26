@@ -15,7 +15,7 @@ class InsertionSort
   end
 end
 
-myArray = (1..2000).to_a
+myArray = (1..100).to_a
 myArray.shuffle!
 puts "before sorting..."
 myArray.each{|item| print "#{item} "}
