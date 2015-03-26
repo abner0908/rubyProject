@@ -15,13 +15,14 @@ class InsertionSort
   end
 end
 
-myArray = (1..15).to_a
+myArray = (1..2000).to_a
 myArray.shuffle!
 puts "before sorting..."
 myArray.each{|item| print "#{item} "}
-puts ""
+puts
 sorter = InsertionSort.new
 sorter.sort!(myArray)
 puts "after sorting..."
 myArray.each{|item| print "#{item} "}
+puts
 
