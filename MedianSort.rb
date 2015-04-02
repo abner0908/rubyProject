@@ -65,11 +65,19 @@ class MedianSort
   end
 end
 
-myArray = (1..100).to_a
+input = ARGV.shift.to_i
+
+if input.is_a? Integer and input > 0 then
+  arrSize = input
+else
+  arrSize = 100
+end
+
+myArray = (1..arrSize).to_a
 myArray.shuffle!
 
 randArray = Array.new
-1.upto(100){randArray.push(rand(1000))}
+1.upto(arrSize){randArray.push(rand(arrSize * 10))}
 myArray =  randArray
 
 puts "before sorting..."
