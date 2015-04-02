@@ -80,4 +80,4 @@ sortingArray = myArray.clone
 sorter.sort!(sortingArray)
 
 puts "after sorting..."
-sortingArray.each{|item| print "#{item} "}
+sortingArray.each{|item| print "#{item} "} ; puts
