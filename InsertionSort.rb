@@ -1,9 +1,15 @@
 class InsertionSort
+  def sort(array)
+    sort!(array.dup)
+  end
+
   def sort!(array)
     array.each_with_index do |value, index|
       insert(array, index, value)
     end
   end
+
+  private
 
   def insert(array, pos, value)
     i = pos - 1
