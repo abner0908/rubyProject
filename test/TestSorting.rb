@@ -1,6 +1,6 @@
 require 'test/unit'
-require 'InsertionSort'
-require 'MedianSort'
+require 'sort/InsertionSort'
+require 'sort/MedianSort'
 
 class TestSorting < Test::Unit::TestCase
   def setup

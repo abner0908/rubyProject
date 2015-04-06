@@ -43,14 +43,20 @@ end
 
 counts = Hash.new(0)
 
-file = File.open('Lady_Chatterleys_Lover.txt')
+fileNmae = './practics/data/Taylor.txt'
+if !File.exist?(fileNmae) then
+  puts 'Error!! ' + fileNmae + ' don\'t exist'
+  exit
+end
+
+file = File.open(fileNmae)
 file.each do |line|
   word_list = words_from_string(line)
   count_frequency(word_list, counts)
 end
 file.close
 
-sorted = counts.sort_by {|word, count| count}
-top_list = sorted.last(rankSize)
+sorted = counts.sort_by{|word, count| count}.reverse
+top_list = sorted.first(rankSize)
 
-top_list.reverse_each{|word, count| puts "#{word}: #{count}"}
+top_list.each{|word, count| puts "#{word}: #{count}"}

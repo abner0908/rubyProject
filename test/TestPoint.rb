@@ -1,6 +1,6 @@
 require 'test/unit'
-require 'Point'
-require 'Point3D'
+require 'myMath/Point'
+require 'myMath/Point3D'
 
 class TestPoint < Test::Unit::TestCase
   def setup
