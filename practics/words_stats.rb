@@ -43,7 +43,7 @@ end
 
 counts = Hash.new(0)
 
-fileNmae = './practics/data/Taylor.txt'
+fileNmae = Dir.pwd + '/practics/data/Womens_Suffrage.txt'
 if !File.exist?(fileNmae) then
   puts 'Error!! ' + fileNmae + ' don\'t exist'
   exit
@@ -60,3 +60,4 @@ sorted = counts.sort_by{|word, count| count}.reverse
 top_list = sorted.first(rankSize)
 
 top_list.each{|word, count| puts "#{word}: #{count}"}
+puts "#{top_list.size}/#{sorted.size}"
