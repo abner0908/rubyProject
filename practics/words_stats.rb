@@ -43,7 +43,7 @@ end
 
 counts = Hash.new(0)
 
-fileNmae = Dir.pwd + '/practics/data/Womens_Suffrage.txt'
+fileNmae = File.dirname(__FILE__) + '/data/Womens_Suffrage.txt'
 if !File.exist?(fileNmae) then
   puts 'Error!! ' + fileNmae + ' don\'t exist'
   exit
